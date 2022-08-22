@@ -1,3 +1,5 @@
+'use strict'
+
 import RedisService, { RedisClientType } from './RedisService';
 import { Worker } from 'worker_threads';
 import { Pool } from 'generic-pool';
@@ -29,7 +31,6 @@ export class PoolService {
     const worker = await this.pool.acquire();
     
     const onMessage = (result: FibonachiResult) => {
-      console.log(result);
       RedisService.set(result.ticket, result.result);
       this.pool.release(worker);
       worker.removeListener("message", onMessage);

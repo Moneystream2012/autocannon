@@ -11,15 +11,18 @@ server.listen(0, startBench);
 function startBench() {
   const instance = autocannon({
     url: 'http://localhost:3001',
-    connections: 40, //default
+    connections: 10000,
     pipelining: 1, // default
-    duration: 2, // default
-    workers: 5,
+    duration: 1,
+    workers: 2,
     requests: [
       {
         method: 'POST', // POST for creating a fibonachi sequence
         path: '/input',
-        setupClient: path.join(__dirname, 'helpers', `setup-client-post`),
+        headers: {
+          'Content-type': 'application/json; charset=utf-8'
+        },
+        setupRequest: path.join(__dirname, 'helpers', `setup-request-post`),
         onResponse: path.join(__dirname, 'helpers', `on-response`)
       },
       {

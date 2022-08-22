@@ -9,6 +9,6 @@ const getRandomInt = (min, max) => {
 module.exports = (req, context) => ({
   ...req,
   body: JSON.stringify({
-    number: getRandomInt(10, 39),
-  })
+    number: getRandomInt(2, 12),
+  }),
 })

@@ -1,5 +1,5 @@
 {
-  "name": "autocannon-usage",
+  "name": "autocannon-usage-for-nodejs-load-testing",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "lint": "eslint --ignore-path .gitignore . --ext .ts",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest --verbose",
-    "autocannon": "node test/fibonachi.test.js"
+    "test:load": "node load-test/fibonachi.test.js"
   },
   "author": "",
   "license": "ISC",

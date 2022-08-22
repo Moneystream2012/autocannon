@@ -1,9 +1,11 @@
-# TypeScript Express API Bootstrap (base / project starter)
+# Autocannon usage for load testing dockerized project
 
-This is a repository intended to serve as a starting point if you want to bootstrap a express API project in TypeScript.
+Will test express API project in TypeScript for load balancing.
+Used hot-reload for faster development.
 
 ## Features
 
+- [Dockerized](https://docs.docker.com/compose/)
 - [TypeScript](https://www.typescriptlang.org/) (v4)
 - [ts-node-dev](https://github.com/wclr/ts-node-dev)
 - [Prettier](https://prettier.io/)
@@ -17,32 +19,35 @@ This is a repository intended to serve as a starting point if you want to bootst
 
 ```
 # install dependencies
-npm install
+yarn
 
-# run in dev mode on port 3000
-npm run dev
+# run in dev mode on port 3001
+yarn dev
 
 # generate production build
-npm run build
+yarn build
 
-# run generated content in dist folder on port 3000
-npm run start
+# test
+yarn test
+
+# test load capability (with autocannon) on port 3001
+yarn test:load
 ```
 
 ## Testing
 
-### Jest with supertest
+### Jest with supertest (not implemented yet)
 
 ```
-npm run test
+yarn test
 ```
 
 ## Linting
 
 ```
 # run linter
-npm run lint
+yarn lint
 
 # fix lint issues
-npm run lint:fix
+yarn lint:fix
 ```
