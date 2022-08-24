@@ -42,6 +42,12 @@ yarn test:load
 yarn test
 ```
 
+### Load testing with autocannon
+
+```
+yarn test:load
+```
+
 ## Linting
 
 ```
