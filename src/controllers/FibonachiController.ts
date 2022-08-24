@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { PoolService } from "../services/PoolService";
-import RedisService from "../services/RedisService";
+import { PoolService } from '../services/PoolService';
+import RedisService from '../services/RedisService';
 
 export default class FibonachiController {
   public async inputData(req: Request, res: Response) {
