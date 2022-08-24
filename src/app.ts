@@ -1,9 +1,8 @@
 import { Application, json, urlencoded } from 'express';
 import helmet from 'helmet';
 import Router from './router';
-import RedisService, {RedisClientType} from "./services/RedisService";
-import client from "./services/RedisService";
-import {PoolService} from "./services/PoolService";
+import RedisService from "./services/RedisService";
+import { PoolService } from "./services/PoolService";
 
 export default class Server {
   constructor(app: Application) {
