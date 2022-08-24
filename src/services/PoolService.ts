@@ -1,6 +1,6 @@
 'use strict'
 
-import RedisService, { RedisClientType } from './RedisService';
+import RedisService from './RedisService';
 import { Worker } from 'worker_threads';
 import { Pool } from 'generic-pool';
 const createPool = require('thread-pool-node');
